@@ -1,0 +1,70 @@
+
+
+============================== 2023-04-26 10:32:01.117550 | 12a56f00-7dee-4866-b56b-3aebe0a1d0a1 ==============================
+[0m10:32:01.117550 [info ] [MainThread]: Running with dbt=1.4.6
+[0m10:32:01.119081 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/max/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'jaffle_shop', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m10:32:01.119185 [debug] [MainThread]: Tracking: tracking
+[0m10:32:01.137727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8ca48b2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8ca48acb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8ca48af80>]}
+[0m10:32:01.139209 [debug] [MainThread]: Starter project path: /Users/max/PycharmProjects/dbt-tutorial/venv/lib/python3.10/site-packages/dbt/include/starter_project
+[0m10:35:01.217264 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8cb7db160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8cb7da110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8cb7da440>]}
+[0m10:35:01.219189 [debug] [MainThread]: Flushing usage events
+[0m10:35:02.276370 [error] [MainThread]: Encountered an error:
+
+[0m10:35:02.280846 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/max/PycharmProjects/dbt-tutorial/venv/lib/python3.10/site-packages/dbt/main.py", line 136, in main
+    results, succeeded = handle_and_check(args)
+  File "/Users/max/PycharmProjects/dbt-tutorial/venv/lib/python3.10/site-packages/dbt/main.py", line 206, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/Users/max/PycharmProjects/dbt-tutorial/venv/lib/python3.10/site-packages/dbt/main.py", line 253, in run_from_args
+    results = task.run()
+  File "/Users/max/PycharmProjects/dbt-tutorial/venv/lib/python3.10/site-packages/dbt/task/init.py", line 305, in run
+    self.create_profile_from_target(adapter, profile_name=project_name)
+  File "/Users/max/PycharmProjects/dbt-tutorial/venv/lib/python3.10/site-packages/dbt/task/init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/Users/max/PycharmProjects/dbt-tutorial/venv/lib/python3.10/site-packages/dbt/task/init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/Users/max/PycharmProjects/dbt-tutorial/venv/lib/python3.10/site-packages/dbt/task/init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/Users/max/PycharmProjects/dbt-tutorial/venv/lib/python3.10/site-packages/click/termui.py", line 166, in prompt
+    value = prompt_func(prompt)
+  File "/Users/max/PycharmProjects/dbt-tutorial/venv/lib/python3.10/site-packages/click/termui.py", line 149, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+
+
+============================== 2023-04-26 10:35:08.271371 | 47170103-082d-4220-9e57-84c34229908b ==============================
+[0m10:35:08.271371 [info ] [MainThread]: Running with dbt=1.4.6
+[0m10:35:08.272874 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/max/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'jaffle_shop', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m10:35:08.272975 [debug] [MainThread]: Tracking: tracking
+[0m10:35:08.291675 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8723bb100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8723bbc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8723bb280>]}
+[0m10:35:08.293121 [info ] [MainThread]: A project called jaffle_shop already exists here.
+[0m10:35:08.293369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8723bbc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8723bbee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8723ba860>]}
+[0m10:35:08.293522 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-26 10:40:49.967740 | fe8d0a3e-6fb3-4755-84f6-7226b1b07759 ==============================
+[0m10:40:49.967740 [info ] [MainThread]: Running with dbt=1.4.6
+[0m10:40:49.969418 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/max/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'jaffle_shop', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m10:40:49.969544 [debug] [MainThread]: Tracking: tracking
+[0m10:40:49.992648 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbe9e8f2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbe9e8ecb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbe9e8ef80>]}
+[0m10:40:49.994778 [debug] [MainThread]: Starter project path: /Users/max/PycharmProjects/dbt-tutorial/venv/lib/python3.10/site-packages/dbt/include/starter_project
+[0m10:44:01.172646 [info ] [MainThread]: Profile jaffle_shop written to /Users/max/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m10:44:01.173840 [info ] [MainThread]: 
+Your new dbt project "jaffle_shop" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:44:01.174483 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbe9e8fbb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbe9e8f3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbbe9e8efe0>]}
+[0m10:44:01.174944 [debug] [MainThread]: Flushing usage events
